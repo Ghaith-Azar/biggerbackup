@@ -1,0 +1,113 @@
+/* Dark mode colors */
+.st0{ fill:#0d1117 }               /* dark background shapes */
+.st2{ fill:#1f3b5a }               /* deep-blue body */
+.st3{ fill:#274768 }               /* slightly lighter blue */
+.st4,.st6{
+  fill:#111;                      /* dark grey fill */
+  stroke:#3a4f5a;                 /* muted steel-grey stroke */
+  stroke-miterlimit:10;
+}
+.st6{
+  stroke:#1f3b5a;
+  stroke-width:2;
+}
+
+.st7,.st8,.st9{
+  stroke:#274768;
+  stroke-miterlimit:10;
+}
+
+.st7{
+  stroke-width:5;
+  stroke-linecap:round;
+  fill:none;
+}
+
+/* white elements replaced with soft grey for dark mode */
+.st8,.st9{
+  fill:#e0e0e0;
+}
+
+.st9{
+  fill:none;
+}
+
+
+/* Cloud animations */
+#cloud1{ animation: cloud003 15s linear infinite; }
+#cloud2{ animation: cloud002 25s linear infinite; }
+#cloud3{ animation: cloud003 20s linear infinite; }
+#cloud4{ animation: float 4s linear infinite; }
+#cloud5{ animation: float 8s linear infinite; }
+#cloud7{ animation: float 5s linear infinite; }
+
+/* Track movement */
+#tracks{ animation: slide 650ms linear infinite; }
+#bumps{ animation: land 10000ms linear infinite; }
+
+/* Car jiggle */
+@keyframes jig {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(1px); }
+  100% { transform: translateY(0px); }
+}
+#car-layers{
+  animation: jig 0.35s linear infinite;
+}
+
+/* Ground movement */
+@keyframes land {
+  from { transform: translateX(0); }
+  to { transform: translateX(1000px); }
+}
+
+@keyframes slide {
+  from { transform: translateX(0px); }
+  to { transform: translateX(100px); }
+}
+
+/* Cloud drifting */
+@keyframes cloud001 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes cloud002 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes cloud003 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+/* Floating motion */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0); }
+  50% { transform: translateY(8px) translateX(5px); }
+  100% { transform: translateY(0px) translateX(0); }
+}
+
+/* Braces wiggle */
+#bracefront, #braceback{
+  animation: braces 1s linear infinite;
+}
+
+@keyframes braces {
+  0% { transform: translateX(-2px); }
+  25% { transform: translateX(3px); }
+  50% { transform: translateX(-2px); }
+  75% { transform: translateX(3px); }
+  100% { transform: translateX(-2px); }
+}
+
+/* Background */
+.main{
+  margin-top: 15%;
+  background-color: #000;           /* pure black */
+}
+
+body, html{
+  background-color: #000;           /* full dark theme */
+}
